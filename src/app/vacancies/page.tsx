@@ -1,11 +1,11 @@
 import {VacanciesList} from "@/entities/Vacancy";
-
+import {PageWrapper} from "@/shared/ui";
 
 const Vacancies = () => {
     return (
-        <div>
+        <PageWrapper>
            <VacanciesList />
-        </div>
+        </PageWrapper>
     )
 }
 

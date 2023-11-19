@@ -1,6 +1,6 @@
 "use client"
-import {FC, useState} from "react";
-import {Button, Typography} from "antd";
+import {FC} from "react";
+import {Typography} from "antd";
 import Image from "next/image";
 
 
@@ -13,21 +13,18 @@ type VacancyCardProps = {
     image: string
 }
 const VacancyCard: FC<VacancyCardProps> = (props) => {
-    const [isCardHovered, setIsCardHovered] = useState(false)
     const {companyName, vacancyName, image, params} = props
     console.log(companyName, vacancyName, image, params)
     return (
         <div
-            onMouseEnter={() => setIsCardHovered(true)}
-            onMouseLeave={() => setIsCardHovered(false)}
-            className='p-5 bg-white flex flex-col gap-[25px] border rounded-md shadow-md m-5 cursor-pointer'>
+            className={`py-2 px-3 bg-white flex flex-col gap-[25px] border rounded-md shadow-md m-5 cursor-pointer hover:shadow-xl`}>
             <div className='flex flex-col gap-[10px]'>
-                <div className='flex items-center gap-1'>
+                <div className='flex items-center gap-1 '>
                     <Text strong>{companyName}</Text>
-                    <div>
+                    <div className='flex-grow-1'>
                         {
                             params?.map((item, index) =>
-                                <Text key={index} type="secondary"> * {item.name}</Text>
+                                <Text key={index} type="secondary"> {item.name}</Text>
                             )
                         }
                     </div>
@@ -36,17 +33,7 @@ const VacancyCard: FC<VacancyCardProps> = (props) => {
             </div>
 
             <div>
-                <Image src={`/${image}.png`} width={300} height={200} alt={image} className='rounded-md'/>
-                {
-                    isCardHovered &&
-                    <div>
-                        <Text>
-                            hi
-                        </Text>
-                        <Button type='primary'>Откликнуться</Button>
-                    </div>
-
-                }
+                <Image src={`/${image}.png`} width={300} height={200} alt={image} className='rounded-md w-full'/>
             </div>
         </div>
     )
