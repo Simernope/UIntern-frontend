@@ -3,8 +3,7 @@ import {FC} from "react";
 import {Typography} from "antd";
 import Image from "next/image";
 
-
-const {Title, Text} = Typography;
+const {Title, Text} = Typography
 
 type VacancyCardProps = {
     companyName: string,
@@ -12,24 +11,24 @@ type VacancyCardProps = {
     vacancyName: string,
     image: string
 }
+
 const VacancyCard: FC<VacancyCardProps> = (props) => {
     const {companyName, vacancyName, image, params} = props
-    console.log(companyName, vacancyName, image, params)
     return (
         <div
-            className={`py-2 px-3 bg-white flex flex-col gap-[25px] border rounded-md shadow-md m-5 cursor-pointer hover:shadow-xl`}>
+            className={`w-[300px] py-2 px-3 bg-white flex flex-col gap-[25px] border rounded-md shadow-md m-5 cursor-pointer hover:shadow-xl`}>
             <div className='flex flex-col gap-[10px]'>
-                <div className='flex items-center gap-1 '>
+                <div className='flex items-center justify-between flex-wrap'>
                     <Text strong>{companyName}</Text>
-                    <div className='flex-grow-1'>
+                    <div className='flex gap-3 flex-wrap'>
                         {
                             params?.map((item, index) =>
-                                <Text key={index} type="secondary"> {item.name}</Text>
+                                <Text key={index} type="secondary">{item.name}</Text>
                             )
                         }
                     </div>
                 </div>
-                <Title level={3}>{vacancyName}</Title>
+                <Title level={3} style={{margin: 0}}>{vacancyName}</Title>
             </div>
 
             <div>
@@ -38,5 +37,6 @@ const VacancyCard: FC<VacancyCardProps> = (props) => {
         </div>
     )
 }
+
 
 export {VacancyCard}
