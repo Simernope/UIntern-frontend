@@ -30,6 +30,7 @@ const VacancyCard: FC<VacancyCardProps> = (props) => {
                 </div>
                 <Title level={3} style={{margin: 0}}>{vacancyName}</Title>
             </div>
+
             <div>
                 <Image src={`/${image}.png`} width={300} height={200} alt={image} className='rounded-md w-full'/>
             </div>
