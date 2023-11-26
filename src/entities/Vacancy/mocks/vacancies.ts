@@ -1,4 +1,4 @@
-type Vacancy = {
+export type Vacancy = {
     companyName: string,
     params: Array<{ id: number, name: string }>,
     vacancyName: string,
