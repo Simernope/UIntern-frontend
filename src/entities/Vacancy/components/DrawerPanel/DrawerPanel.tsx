@@ -75,7 +75,7 @@ const DrawerPanel = ({onClose, open, vacancyData}: ModalPanelProps) => {
                         </div>
                     </div>
                     <div className='flex justify-end'>
-                        <Link href={`/vacancies/${vacancyData.vacancyName}`}>
+                        <Link href={`/vacancies/${vacancyData.id}`}>
                             <Button type='primary'>Подробнее</Button>
                         </Link>
                     </div>
