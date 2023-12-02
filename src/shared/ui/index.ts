@@ -1,3 +1,3 @@
-export {PageWrapper} from './PageWrapper/PageWrapper'
+export {PageWrapper} from './pageWrapper/PageWrapper'
 
 //test commit
