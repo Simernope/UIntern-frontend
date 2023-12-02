@@ -7,7 +7,8 @@ interface Props {
 
 const Vacancy = ({params}: Props) => {
     return (
-        <>Вакансия {params.id}
+        <>
+            Вакансия {params.id}
         </>
     )
 }

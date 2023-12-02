@@ -2,7 +2,14 @@ export type Vacancy = {
     companyName: string,
     params: Array<{ id: number, name: string }>,
     vacancyName: string,
-    image: string
+    image: string,
+    requireSkills: Array<{ id: number, name: string }>,
+    employmentType: 'очно' | 'гибрид' | 'дистанционно',
+    format: string,
+    address: string,
+    toGetProperties: Array<{ id: number, name: string }>,
+    workSchedule: string,
+    weeksPlan: Array<{ id: number, name: string }>
 }
 
 export const vacancies: Array<Vacancy> = [
@@ -10,48 +17,104 @@ export const vacancies: Array<Vacancy> = [
         companyName: 'Сбер',
         params: [{id: 0, name: 'Тестовое задание'}, {id: 1, name: 'Екатеринбург'}],
         vacancyName: 'Реакт разработчик',
-        image: 'react'
+        image: 'react',
+        requireSkills: [{name: 'HTML', id: 342}, {name: 'HTML', id: 432}, {name: 'Javascript', id: 4342}],
+        employmentType: 'очно',
+        format: 'Стажировка с возможностью трудоустройства',
+        address: 'г. Екатеринбург, улица Ленина, 102',
+        toGetProperties: [{id: 34243, name:'Подать заявку'},{id: 432, name:'Выполнить тестовое задание'}, {id: 432, name:'Пройти собеседование'}, ],
+        workSchedule: '5/2, 6 часов, 8 недель',
+        weeksPlan: [{name: 'Онбординг', id: 321}, {name: 'Анализ', id: 34321}, {name: 'Разработка', id: 321132}, {name: 'Тестирование', id: 3543421}]
     },
     {
         companyName: 'Уцсб',
         params: [{id: 1, name: 'Тестовое задание'}, {id: 1, name: 'Екатеринбург'}],
         vacancyName: 'Тестировщик C#',
-        image: 'testing'
+        image: 'testing',
+        requireSkills: [{name: 'HTML', id: 342}, {name: 'HTML', id: 432}, {name: 'Javascript', id: 4342}],
+        employmentType: 'очно',
+        format: 'Стажировка с возможностью трудоустройства',
+        address: 'г. Екатеринбург, улица Ленина, 102',
+        toGetProperties: [{id: 34243, name:'Подать заявку'},{id: 432, name:'Выполнить тестовое задание'}, {id: 432, name:'Пройти собеседование'}, ],
+        workSchedule: '5/2, 6 часов, 8 недель',
+        weeksPlan: [{name: 'Онбординг', id: 321}, {name: 'Анализ', id: 34321}, {name: 'Разработка', id: 321132}, {name: 'Тестирование', id: 3543421}]
     },
     {
         companyName: 'СКБ контур',
         params: [{id: 2, name: 'Тестовое задание'}, {id: 1, name: 'Екатеринбург'}],
         vacancyName: 'Дизайнер',
-        image: 'uxui'
+        image: 'uxui',
+        requireSkills: [{name: 'HTML', id: 342}, {name: 'HTML', id: 432}, {name: 'Javascript', id: 4342}],
+        employmentType: 'очно',
+        format: 'Стажировка с возможностью трудоустройства',
+        address: 'г. Екатеринбург, улица Ленина, 102',
+        toGetProperties: [{id: 34243, name:'Подать заявку'},{id: 432, name:'Выполнить тестовое задание'}, {id: 432, name:'Пройти собеседование'}, ],
+        workSchedule: '5/2, 6 часов, 8 недель',
+        weeksPlan: [{name: 'Онбординг', id: 321}, {name: 'Анализ', id: 34321}, {name: 'Разработка', id: 321132}, {name: 'Тестирование', id: 3543421}]
     },
     {
         companyName: 'Сбер',
         params: [{id: 3, name: 'Тестовое задание'}, {id: 1, name: 'Екатеринбург'}],
         vacancyName: 'Бэкенд разработчик',
-        image: 'backend'
+        image: 'backend',
+        requireSkills: [{name: 'HTML', id: 342}, {name: 'HTML', id: 432}, {name: 'Javascript', id: 4342}],
+        employmentType: 'очно',
+        format: 'Стажировка с возможностью трудоустройства',
+        address: 'г. Екатеринбург, улица Ленина, 102',
+        toGetProperties: [{id: 34243, name:'Подать заявку'},{id: 432, name:'Выполнить тестовое задание'}, {id: 432, name:'Пройти собеседование'}, ],
+        workSchedule: '5/2, 6 часов, 8 недель',
+        weeksPlan: [{name: 'Онбординг', id: 321}, {name: 'Анализ', id: 34321}, {name: 'Разработка', id: 321132}, {name: 'Тестирование', id: 3543421}]
     },
     {
         companyName: 'Сбер 2',
         params: [{id: 0, name: 'Тестовое задание'}, {id: 1, name: 'Екатеринбург'}],
         vacancyName: 'Реакт разработчик',
-        image: 'react'
+        image: 'react',
+        requireSkills: [{name: 'HTML', id: 342}, {name: 'HTML', id: 432}, {name: 'Javascript', id: 4342}],
+        employmentType: 'очно',
+        format: 'Стажировка с возможностью трудоустройства',
+        address: 'г. Екатеринбург, улица Ленина, 102',
+        toGetProperties: [{id: 34243, name:'Подать заявку'},{id: 432, name:'Выполнить тестовое задание'}, {id: 432, name:'Пройти собеседование'}, ],
+        workSchedule: '5/2, 6 часов, 8 недель',
+        weeksPlan: [{name: 'Онбординг', id: 321}, {name: 'Анализ', id: 34321}, {name: 'Разработка', id: 321132}, {name: 'Тестирование', id: 3543421}]
     },
     {
         companyName: 'Уцсб 2',
         params: [{id: 1, name: 'Тестовое задание'}, {id: 1, name: 'Екатеринбург'}],
         vacancyName: 'Тестировщик C#',
-        image: 'testing'
+        image: 'testing',
+        requireSkills: [{name: 'HTML', id: 342}, {name: 'HTML', id: 432}, {name: 'Javascript', id: 4342}],
+        employmentType: 'очно',
+        format: 'Стажировка с возможностью трудоустройства',
+        address: 'г. Екатеринбург, улица Ленина, 102',
+        toGetProperties: [{id: 34243, name:'Подать заявку'},{id: 432, name:'Выполнить тестовое задание'}, {id: 432, name:'Пройти собеседование'}, ],
+        workSchedule: '5/2, 6 часов, 8 недель',
+        weeksPlan: [{name: 'Онбординг', id: 321}, {name: 'Анализ', id: 34321}, {name: 'Разработка', id: 321132}, {name: 'Тестирование', id: 3543421}]
     },
     {
         companyName: 'СКБ контур 3',
         params: [{id: 2, name: 'Тестовое задание'}, {id: 1, name: 'Екатеринбург'}],
         vacancyName: 'Дизайнер',
-        image: 'uxui'
+        image: 'uxui',
+        requireSkills: [{name: 'HTML', id: 342}, {name: 'HTML', id: 432}, {name: 'Javascript', id: 4342}],
+        employmentType: 'очно',
+        format: 'Стажировка с возможностью трудоустройства',
+        address: 'г. Екатеринбург, улица Ленина, 102',
+        toGetProperties: [{id: 34243, name:'Подать заявку'},{id: 432, name:'Выполнить тестовое задание'}, {id: 432, name:'Пройти собеседование'}, ],
+        workSchedule: '5/2, 6 часов, 8 недель',
+        weeksPlan: [{name: 'Онбординг', id: 321}, {name: 'Анализ', id: 34321}, {name: 'Разработка', id: 321132}, {name: 'Тестирование', id: 3543421}]
     },
     {
         companyName: 'Сбер 4',
         params: [{id: 3, name: 'Тестовое задание'}, {id: 1, name: 'Екатеринбург'}],
         vacancyName: 'Бэкенд разработчик',
-        image: 'backend'
+        image: 'backend',
+        requireSkills: [{name: 'HTML', id: 342}, {name: 'HTML', id: 432}, {name: 'Javascript', id: 4342}],
+        employmentType: 'очно',
+        format: 'Стажировка с возможностью трудоустройства',
+        address: 'г. Екатеринбург, улица Ленина, 102',
+        toGetProperties: [{id: 34243, name:'Подать заявку'},{id: 432, name:'Выполнить тестовое задание'}, {id: 432, name:'Пройти собеседование'}, ],
+        workSchedule: '5/2, 6 часов, 8 недель',
+        weeksPlan: [{name: 'Онбординг', id: 321}, {name: 'Анализ', id: 34321}, {name: 'Разработка', id: 321132}, {name: 'Тестирование', id: 3543421}]
     }
 ]
