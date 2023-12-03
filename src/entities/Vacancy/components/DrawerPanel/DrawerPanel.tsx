@@ -1,8 +1,10 @@
+"use client"
 import {Button, Drawer, Grid, Typography, Row, Col, Divider} from 'antd';
 import {Vacancy} from "@/entities/Vacancy/mocks/vacancies";
 import Link from "next/link";
 import {CloseOutlined} from "@ant-design/icons";
 import {ReactNode} from "react";
+import {WeekItem} from "@/entities/Vacancy";
 
 type ModalPanelProps = {
     onClose: () => void,
@@ -21,15 +23,6 @@ const ItemWrapper = ({label, value}: { label: string, value: string | ReactNode 
             </Row>
             <Divider className='m-0'/>
         </>
-    )
-}
-
-const WeekItem = ({week, name}: { week: string, name: string | ReactNode }) => {
-    return (
-        <div className='bg-white py-2 px-4 flex flex-col gap-2 rounded-md'>
-            <div className='accent-neutral-8'>{week} неделя</div>
-            <div className='font-medium'>{name}</div>
-        </div>
     )
 }
 
@@ -85,4 +78,4 @@ const DrawerPanel = ({onClose, open, vacancyData}: ModalPanelProps) => {
     )
 }
 
-export {DrawerPanel}
+export default DrawerPanel

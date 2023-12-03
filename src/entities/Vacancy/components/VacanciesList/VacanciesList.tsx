@@ -1,5 +1,5 @@
 "use client"
-import {DrawerPanel, VacancyCard} from "@/entities/Vacancy";
+import {VacancyCard, DrawerPanel} from "@/entities/Vacancy";
 import {vacancies, Vacancy} from "@/entities/Vacancy/mocks/vacancies";
 import {Col, Row} from "antd";
 import {useState} from "react";
@@ -43,4 +43,4 @@ const VacanciesList = () => {
     )
 }
 
-export {VacanciesList}
+export default VacanciesList

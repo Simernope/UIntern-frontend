@@ -1,6 +1,6 @@
 import type {Metadata, ResolvingMetadata} from 'next'
 import {vacancies} from "@/entities/Vacancy/mocks/vacancies";
-import VacancyHeader from "@/entities/Vacancy/components/VacancyHeader/VacancyHeader";
+import {VacancyHeader, VacancyDescription, ActionsPlan} from "@/entities/Vacancy";
 
 type Props = {
     params: { id: string }
@@ -28,15 +28,22 @@ const Vacancy = ({params}: Props) => {
             Вакансия {params.id}
             {
                 vacancyData ?
-                    <VacancyHeader
-                        vacancyName={vacancyName}
-                        date={'1 октября'}
-                        requiredSkills={requireSkills}
-                        format={format}
-                        address={address}
-                        employmentType={employmentType}
-                        workSchedule={workSchedule}
-                    />
+                    <div>
+                        <div className='flex flex-col gap-[20px] max-w-[890px]'>
+                            <VacancyHeader
+                                vacancyName={vacancyName}
+                                date={'1 октября'}
+                                requiredSkills={requireSkills}
+                                format={format}
+                                address={address}
+                                employmentType={employmentType}
+                                workSchedule={workSchedule}
+                            />
+                            <VacancyDescription />
+                            <ActionsPlan />
+                        </div>
+                    </div>
+
                     :
                     <>Нет данных по вакансии</>
             }

@@ -1,6 +1,7 @@
 "use client"
 import {Row, Typography} from "antd";
-import {FC, ReactNode} from "react";
+import {FC} from "react";
+import {ParamItem} from "@/entities/Vacancy";
 
 type VacancyHeaderProps = {
     vacancyName: string,
@@ -10,15 +11,6 @@ type VacancyHeaderProps = {
     address: string,
     employmentType: string,
     workSchedule: string
-}
-
-const ParamsWrapper = ({label, description}: { label: string, description: string | ReactNode }) => {
-    return (
-        <div className='flex flex-col gap-1'>
-            <div className='accent-neutral-8'>{label}</div>
-            <div className='accent-neutral-10 font-medium'>{description}</div>
-        </div>
-    )
 }
 
 const VacancyHeader: FC<VacancyHeaderProps> = (props) => {
@@ -32,13 +24,13 @@ const VacancyHeader: FC<VacancyHeaderProps> = (props) => {
         workSchedule
     } = props
     return (
-        <div className='bg-white py-[10px] px-[15px] flex flex-col gap-5'>
+        <div className='bg-white py-[10px] px-[15px] flex flex-col gap-5 rounded-[5px]'>
             <Row justify='space-between' align='middle'>
                 <Typography.Title level={3} style={{margin: 0}}>{vacancyName}</Typography.Title>
                 <span className='accent-neutral-9'>{date}</span>
             </Row>
-            <ParamsWrapper label='Формат' description={format}/>
-            <ParamsWrapper label='Требуемые навыки' description={
+            <ParamItem label='Формат' description={format}/>
+            <ParamItem label='Требуемые навыки' description={
                 <div className='flex gap-3'>
                     {
                         requiredSkills.map((item, index) =>
@@ -48,7 +40,7 @@ const VacancyHeader: FC<VacancyHeaderProps> = (props) => {
                     }
                 </div>
             }/>
-            <ParamsWrapper
+            <ParamItem
                 label='Местоположение и тип занятости'
                 description={`${address} * ${employmentType} * ${workSchedule}`}
             />
