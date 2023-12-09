@@ -1,0 +1,1 @@
+export {default as CompanyPageCard} from './components/CompanyPageCard/CompanyPageCard'

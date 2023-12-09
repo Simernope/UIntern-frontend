@@ -62,7 +62,8 @@ const DrawerPanel = ({onClose, open, vacancyData}: ModalPanelProps) => {
                         <div className='mt-8 flex flex-col gap-4'>
                             {
                                 vacancyData.weeksPlan.map((item, index) =>
-                                    <WeekItem key={index * 1213} week={`${index + 1} неделя`} name={item.name}/>
+                                    <WeekItem key={index * 1213} week={`${index + 1} неделя`} name={item.name}
+                                              bgColor='bg-white'/>
                                 )
                             }
                         </div>
