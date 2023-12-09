@@ -1,6 +1,6 @@
 import type {Metadata, ResolvingMetadata} from 'next'
 import {vacancies} from "@/entities/Vacancy/mocks/vacancies";
-import {VacancyPage} from "@/pages/vacancy";
+import {VacancyPage} from "@/entities/Vacancy";
 
 type Props = {
     params: { id: string }

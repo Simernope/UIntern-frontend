@@ -37,4 +37,4 @@ const VacancyPage: NextPage<VacancyPageProps> = ({vacancyData}) => {
     )
 }
 
-export {VacancyPage}
+export default VacancyPage
