@@ -1,8 +1,10 @@
+"use client"
 import {Button, Drawer, Grid, Typography, Row, Col, Divider} from 'antd';
 import {Vacancy} from "@/entities/Vacancy/mocks/vacancies";
 import Link from "next/link";
 import {CloseOutlined} from "@ant-design/icons";
 import {ReactNode} from "react";
+import {WeekItem} from "@/entities/Vacancy";
 
 type ModalPanelProps = {
     onClose: () => void,
@@ -21,15 +23,6 @@ const ItemWrapper = ({label, value}: { label: string, value: string | ReactNode 
             </Row>
             <Divider className='m-0'/>
         </>
-    )
-}
-
-const WeekItem = ({week, name}: { week: string, name: string | ReactNode }) => {
-    return (
-        <div className='bg-white py-2 px-4 flex flex-col gap-2 rounded-md'>
-            <div className='accent-neutral-8'>{week} неделя</div>
-            <div className='font-medium'>{name}</div>
-        </div>
     )
 }
 
@@ -69,13 +62,14 @@ const DrawerPanel = ({onClose, open, vacancyData}: ModalPanelProps) => {
                         <div className='mt-8 flex flex-col gap-4'>
                             {
                                 vacancyData.weeksPlan.map((item, index) =>
-                                    <WeekItem key={index * 1213} week={`${index + 1} неделя`} name={item.name}/>
+                                    <WeekItem key={index * 1213} week={`${index + 1} неделя`} name={item.name}
+                                              bgColor='bg-white'/>
                                 )
                             }
                         </div>
                     </div>
                     <div className='flex justify-end'>
-                        <Link href={`/vacancies/${vacancyData.vacancyName}`}>
+                        <Link href={`/vacancies/${vacancyData.id}`}>
                             <Button type='primary'>Подробнее</Button>
                         </Link>
                     </div>
@@ -85,4 +79,4 @@ const DrawerPanel = ({onClose, open, vacancyData}: ModalPanelProps) => {
     )
 }
 
-export {DrawerPanel}
+export default DrawerPanel

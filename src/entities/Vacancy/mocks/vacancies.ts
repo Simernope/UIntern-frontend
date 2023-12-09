@@ -1,4 +1,5 @@
 export type Vacancy = {
+    id: number,
     companyName: string,
     params: Array<{ id: number, name: string }>,
     vacancyName: string,
@@ -14,6 +15,7 @@ export type Vacancy = {
 
 export const vacancies: Array<Vacancy> = [
     {
+        id: 0,
         companyName: 'Сбер',
         params: [{id: 0, name: 'Тестовое задание'}, {id: 1, name: 'Екатеринбург'}],
         vacancyName: 'Реакт разработчик',
@@ -27,6 +29,7 @@ export const vacancies: Array<Vacancy> = [
         weeksPlan: [{name: 'Онбординг', id: 321}, {name: 'Анализ', id: 34321}, {name: 'Разработка', id: 321132}, {name: 'Тестирование', id: 3543421}]
     },
     {
+        id: 1,
         companyName: 'Уцсб',
         params: [{id: 1, name: 'Тестовое задание'}, {id: 1, name: 'Екатеринбург'}],
         vacancyName: 'Тестировщик C#',
@@ -40,6 +43,7 @@ export const vacancies: Array<Vacancy> = [
         weeksPlan: [{name: 'Онбординг', id: 321}, {name: 'Анализ', id: 34321}, {name: 'Разработка', id: 321132}, {name: 'Тестирование', id: 3543421}]
     },
     {
+        id: 2,
         companyName: 'СКБ контур',
         params: [{id: 2, name: 'Тестовое задание'}, {id: 1, name: 'Екатеринбург'}],
         vacancyName: 'Дизайнер',
@@ -53,6 +57,7 @@ export const vacancies: Array<Vacancy> = [
         weeksPlan: [{name: 'Онбординг', id: 321}, {name: 'Анализ', id: 34321}, {name: 'Разработка', id: 321132}, {name: 'Тестирование', id: 3543421}]
     },
     {
+        id: 3,
         companyName: 'Сбер',
         params: [{id: 3, name: 'Тестовое задание'}, {id: 1, name: 'Екатеринбург'}],
         vacancyName: 'Бэкенд разработчик',
@@ -66,6 +71,7 @@ export const vacancies: Array<Vacancy> = [
         weeksPlan: [{name: 'Онбординг', id: 321}, {name: 'Анализ', id: 34321}, {name: 'Разработка', id: 321132}, {name: 'Тестирование', id: 3543421}]
     },
     {
+        id: 4,
         companyName: 'Сбер 2',
         params: [{id: 0, name: 'Тестовое задание'}, {id: 1, name: 'Екатеринбург'}],
         vacancyName: 'Реакт разработчик',
@@ -79,6 +85,7 @@ export const vacancies: Array<Vacancy> = [
         weeksPlan: [{name: 'Онбординг', id: 321}, {name: 'Анализ', id: 34321}, {name: 'Разработка', id: 321132}, {name: 'Тестирование', id: 3543421}]
     },
     {
+        id: 5,
         companyName: 'Уцсб 2',
         params: [{id: 1, name: 'Тестовое задание'}, {id: 1, name: 'Екатеринбург'}],
         vacancyName: 'Тестировщик C#',
@@ -92,6 +99,7 @@ export const vacancies: Array<Vacancy> = [
         weeksPlan: [{name: 'Онбординг', id: 321}, {name: 'Анализ', id: 34321}, {name: 'Разработка', id: 321132}, {name: 'Тестирование', id: 3543421}]
     },
     {
+        id: 6,
         companyName: 'СКБ контур 3',
         params: [{id: 2, name: 'Тестовое задание'}, {id: 1, name: 'Екатеринбург'}],
         vacancyName: 'Дизайнер',
@@ -105,6 +113,7 @@ export const vacancies: Array<Vacancy> = [
         weeksPlan: [{name: 'Онбординг', id: 321}, {name: 'Анализ', id: 34321}, {name: 'Разработка', id: 321132}, {name: 'Тестирование', id: 3543421}]
     },
     {
+        id: 7,
         companyName: 'Сбер 4',
         params: [{id: 3, name: 'Тестовое задание'}, {id: 1, name: 'Екатеринбург'}],
         vacancyName: 'Бэкенд разработчик',
